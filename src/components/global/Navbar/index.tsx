@@ -1,5 +1,5 @@
 'use client'
-
+import Image from 'next/image'
 import Chevron from '@/icons/Chevron'
 import Conquest from '@/icons/Conquest'
 import Constitution from '@/icons/Constitution'
@@ -44,9 +44,16 @@ export default function GlobalNavbar({
 
   return (
     <>
-      <header className="absolute z-[41] flex w-full flex-col border-b border-white/10 bg-primary-400/5 px-3 py-2 drop-shadow-md backdrop-blur-xl">
+      <header className="fixed z-[41] flex w-full flex-col border-b border-white/10 bg-primary-400/5 px-3 py-2 drop-shadow-md backdrop-blur-xl">
         <div className="relative flex w-full items-center justify-end gap-4 3xl:justify-between">
           <div className="mr-auto flex gap-4 3xl:mr-0">
+          <Image
+                  src={`/images/logo.png`}
+                  alt='AVA'
+                  width={130}
+                  height={41}
+                  className="object-contain w-130 h-41"
+          />
             <ManageSettings />
 
             <ChangeLanguage />
